@@ -6,14 +6,16 @@ Một mini game web lấy cảm hứng từ gameplay thủ thành khu vườn, v
 
 ## Tính năng
 
-- Grid 5 hàng x 9 cột
+- Giao diện khu vườn đẹp hơn với nền trời, mây, hiệu ứng nắng, card cây và animation.
+- Grid 5 hàng x 9 cột.
 - 3 loại cây:
-  - 🌿 Pea Plant: bắn zombie
-  - 🌻 Sun Bloom: tạo năng lượng mặt trời
-  - 🪵 Wood Wall: chặn zombie
-- Zombie sinh theo wave
-- Có điểm, máu nhà, năng lượng
-- Có thể chạy trực tiếp bằng GitHub Pages
+  - 🌿 Pea Ranger: bắn zombie.
+  - 🌻 Sun Bloom: tạo năng lượng mặt trời.
+  - 🪵 Wood Guardian: chặn zombie.
+- Zombie sinh theo wave và nhanh dần.
+- Có điểm, máu nhà, năng lượng và best score lưu bằng `localStorage`.
+- Có nút **Hack Mode / ∞ Energy** để trồng cây mà không bị trừ năng lượng.
+- Có thể chạy trực tiếp bằng GitHub Pages.
 
 ## Cách chơi
 
@@ -21,7 +23,9 @@ Một mini game web lấy cảm hứng từ gameplay thủ thành khu vườn, v
 2. Chọn cây trong shop.
 3. Click vào ô đất để trồng cây.
 4. Thu năng lượng mặt trời để trồng thêm cây.
-5. Ngăn zombie đi hết khu vườn.
+5. Bật **Hack Mode / ∞ Energy** nếu muốn chơi thoải mái hơn.
+6. Có thể bấm phím **H** để bật/tắt nhanh chế độ năng lượng ∞.
+7. Ngăn zombie đi hết khu vườn.
 
 ## Chạy local
 
@@ -42,10 +46,10 @@ Sau khi GitHub Pages build xong, game sẽ chạy tại:
 https://ngthnam.github.io/garden-defense-game/
 ```
 
-## Gợi ý nâng cấp
+## Gợi ý nâng cấp tiếp
 
-- Thêm nhiều loại zombie
-- Thêm âm thanh
-- Thêm level/wave boss
-- Lưu high score bằng `localStorage`
-- Tối ưu điều khiển trên mobile
+- Thêm hình ảnh sprite PNG/SVG riêng cho cây và zombie.
+- Thêm âm thanh bắn đạn, thu nắng, zombie bị hạ.
+- Thêm level/wave boss.
+- Thêm màn hình chọn độ khó.
+- Tối ưu điều khiển trên mobile.
