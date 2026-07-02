@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garden Defense Mini</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">🌱 Mini Web Game</p>
+        <h1>Garden Defense</h1>
+        <p>Trồng cây, thu năng lượng mặt trời và ngăn zombie tiến vào khu vườn.</p>
+      </div>
+      <button id="startBtn">Bắt đầu chơi</button>
+    </section>
+
+    <section class="hud">
+      <div>☀️ Năng lượng: <strong id="sunCount">150</strong></div>
+      <div>🌊 Wave: <strong id="waveCount">1</strong></div>
+      <div>🏆 Điểm: <strong id="scoreCount">0</strong></div>
+      <div>❤️ Nhà: <strong id="lifeCount">5</strong></div>
+    </section>
+
+    <section class="shop">
+      <button class="plant-card selected" data-plant="pea"><span>🌿</span><b>Pea Plant</b><small>50 ☀️ · Bắn đạn</small></button>
+      <button class="plant-card" data-plant="sun"><span>🌻</span><b>Sun Bloom</b><small>75 ☀️ · Sinh năng lượng</small></button>
+      <button class="plant-card" data-plant="wall"><span>🪵</span><b>Wood Wall</b><small>40 ☀️ · Chặn zombie</small></button>
+    </section>
+
+    <section id="message" class="message">Chọn cây rồi click vào ô đất để trồng.</section>
+    <section id="board" class="board" aria-label="Khu vườn 5 hàng 9 cột"></section>
+
+    <section class="tips">
+      <h2>Cách chơi</h2>
+      <p>Click cây trong shop → click ô đất. Cây xanh bắn zombie cùng hàng, hoa hướng dương tạo năng lượng, tường gỗ chặn zombie.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
