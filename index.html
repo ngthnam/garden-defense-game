@@ -7,35 +7,72 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="scene-bg" aria-hidden="true">
+    <span class="cloud cloud-1">☁️</span>
+    <span class="cloud cloud-2">☁️</span>
+    <span class="spark spark-1">✦</span>
+    <span class="spark spark-2">✦</span>
+  </div>
+
   <main class="app">
     <section class="hero">
-      <div>
-        <p class="eyebrow">🌱 Mini Web Game</p>
-        <h1>Garden Defense</h1>
-        <p>Trồng cây, thu năng lượng mặt trời và ngăn zombie tiến vào khu vườn.</p>
+      <div class="hero-copy">
+        <p class="eyebrow">🌱 Garden Defense</p>
+        <h1>Defend Your Magic Garden</h1>
+        <p>Trồng cây phép thuật, thu nắng và chặn đội quân zombie trước khi chúng tràn vào ngôi nhà nhỏ.</p>
       </div>
-      <button id="startBtn">Bắt đầu chơi</button>
+
+      <div class="hero-actions">
+        <button id="startBtn" class="primary-btn">Bắt đầu chơi</button>
+        <label class="hack-switch" title="Bật để trồng cây không tốn năng lượng. Có thể bấm phím H để bật/tắt.">
+          <input id="hackToggle" type="checkbox" />
+          <span class="switch-ui"></span>
+          <span>
+            <b>Hack Mode</b>
+            <small>∞ Energy</small>
+          </span>
+        </label>
+      </div>
     </section>
 
-    <section class="hud">
-      <div>☀️ Năng lượng: <strong id="sunCount">150</strong></div>
-      <div>🌊 Wave: <strong id="waveCount">1</strong></div>
-      <div>🏆 Điểm: <strong id="scoreCount">0</strong></div>
-      <div>❤️ Nhà: <strong id="lifeCount">5</strong></div>
+    <section class="hud" aria-label="Thông số game">
+      <div class="stat-card"><span>☀️</span><small>Năng lượng</small><strong id="sunCount">150</strong></div>
+      <div class="stat-card"><span>🌊</span><small>Wave</small><strong id="waveCount">1</strong></div>
+      <div class="stat-card"><span>🏆</span><small>Điểm</small><strong id="scoreCount">0</strong></div>
+      <div class="stat-card"><span>❤️</span><small>Nhà</small><strong id="lifeCount">5</strong></div>
+      <div class="stat-card"><span>👑</span><small>Best</small><strong id="bestCount">0</strong></div>
     </section>
 
-    <section class="shop">
-      <button class="plant-card selected" data-plant="pea"><span>🌿</span><b>Pea Plant</b><small>50 ☀️ · Bắn đạn</small></button>
-      <button class="plant-card" data-plant="sun"><span>🌻</span><b>Sun Bloom</b><small>75 ☀️ · Sinh năng lượng</small></button>
-      <button class="plant-card" data-plant="wall"><span>🪵</span><b>Wood Wall</b><small>40 ☀️ · Chặn zombie</small></button>
+    <section class="shop" aria-label="Chọn cây">
+      <button class="plant-card selected" data-plant="pea">
+        <span class="plant-icon">🌿</span>
+        <b>Pea Ranger</b>
+        <small>50 ☀️ · Bắn đạn xanh</small>
+      </button>
+      <button class="plant-card" data-plant="sun">
+        <span class="plant-icon">🌻</span>
+        <b>Sun Bloom</b>
+        <small>75 ☀️ · Sinh năng lượng</small>
+      </button>
+      <button class="plant-card" data-plant="wall">
+        <span class="plant-icon">🪵</span>
+        <b>Wood Guardian</b>
+        <small>40 ☀️ · Chặn zombie</small>
+      </button>
     </section>
 
-    <section id="message" class="message">Chọn cây rồi click vào ô đất để trồng.</section>
-    <section id="board" class="board" aria-label="Khu vườn 5 hàng 9 cột"></section>
+    <section id="message" class="message">Chọn cây rồi click vào ô đất để trồng. Bấm H để bật/tắt Hack Mode.</section>
+
+    <section class="garden-frame">
+      <div class="lane-markers" aria-hidden="true">
+        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+      </div>
+      <section id="board" class="board" aria-label="Khu vườn 5 hàng 9 cột"></section>
+    </section>
 
     <section class="tips">
-      <h2>Cách chơi</h2>
-      <p>Click cây trong shop → click ô đất. Cây xanh bắn zombie cùng hàng, hoa hướng dương tạo năng lượng, tường gỗ chặn zombie.</p>
+      <h2>🎮 Cách chơi nhanh</h2>
+      <p>Click cây trong shop → click ô đất. Cây xanh bắn zombie cùng hàng, hoa hướng dương tạo nắng, tường gỗ giữ chân zombie. Bật <b>Hack Mode</b> để trồng cây không giới hạn năng lượng.</p>
     </section>
   </main>
 
